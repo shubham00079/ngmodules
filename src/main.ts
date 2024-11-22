@@ -1,5 +1,7 @@
-import { bootstrapApplication } from '@angular/platform-browser';
+// main.ts code needs to be changed for ngmodules
+// app.component.ts is not the entry point, instead app.modul.ts is.
 
-import { AppComponent } from './app/app.component';
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { AppModule } from "./app/app.module";
 
-bootstrapApplication(AppComponent).catch((err) => console.error(err));
+platformBrowserDynamic().bootstrapModule(AppModule);
